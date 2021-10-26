@@ -5,9 +5,6 @@ const router = createRouter({
     {
       path: '/',
       component: () => import('../views/index.vue'),
-      meta: {
-        title: 'Vue-Plugin',
-      },
     },
     {
       path: '/lazyload',
@@ -21,7 +18,9 @@ const router = createRouter({
 })
 
 router.beforeEach((to) => {
-  document.title = to.meta?.title
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
 })
 
 export default router
