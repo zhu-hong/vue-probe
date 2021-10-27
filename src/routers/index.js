@@ -13,6 +13,13 @@ const router = createRouter({
         title: 'Lazyload',
       },
     },
+    {
+      path: '/virtual-scroll',
+      component: () => import('../views/VirtualScroll/index.vue'),
+      meta: {
+        title: 'VirtualScroll',
+      },
+    },
   ],
   history: createWebHistory(),
 })

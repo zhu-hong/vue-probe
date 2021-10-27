@@ -4,7 +4,7 @@ import router from './routers'
 
 import 'virtual:windi.css'
 
-import { VueLazyload } from '../plugin'
+import { VueLazyload, VueVirtualScroll } from '../plugin'
 import loading from './assets/loading.svg'
 import error from './assets/error.svg'
 
@@ -16,4 +16,5 @@ createApp(App)
     error,
     preload: 1,
   })
+  .use(VueVirtualScroll)
   .mount('#app')
