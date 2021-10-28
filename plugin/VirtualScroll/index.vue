@@ -40,13 +40,13 @@ const handleScroll = (e) => {
 </script>
 
 <template>
-  <section ref="container" :class="$style.container" @scroll.passive="throttle(handleScroll($event), 300)">
+  <main ref="container" :class="$style.container" @scroll.passive="throttle(handleScroll($event), 300)">
     <div :style="fillPadding">
       <template v-for="data of renderData">
         <slot :data="data"></slot>
       </template>
     </div>
-  </section>
+  </main>
 </template>
 
 <style module>
