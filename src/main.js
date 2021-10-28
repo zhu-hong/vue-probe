@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './routers'
 
 import 'virtual:windi.css'
+import './assets/style.css'
 
 import { VueLazyload, VueVirtualScroll } from '../plugin'
 import loading from './assets/loading.svg'
