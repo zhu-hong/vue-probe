@@ -1,5 +1,6 @@
 import { nextTick } from '@vue/runtime-core'
-import { getScrollParent, throttle } from './util'
+import { getScrollParent } from './util'
+import { throttle } from '../../shared'
 import Lazyimg from './Lazyimg'
 
 export default class Lazy {
