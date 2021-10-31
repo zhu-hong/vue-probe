@@ -10,7 +10,7 @@ export default class Lazy {
     this.lazyImgPool = []
   }
 
-  bindLazy(el, bindings, vnode) {
+  bindLazy(el, binding) {
     nextTick(() => {
       const scrollParent = getScrollParent(el)
 
@@ -20,7 +20,7 @@ export default class Lazy {
 
       const lazyImg = new Lazyimg({
         el,
-        src: bindings.value,
+        src: binding.value,
         options: this.options,
         imgRender: this.imgRender.bind(this),
       })
