@@ -16,6 +16,7 @@ export default class Lazy {
 
       if (scrollParent && !this.isAddScrollListener) {
         scrollParent.addEventListener('scroll', throttle(this.handleScroll.bind(this), 200), false)
+        this.isAddScrollListener = true
       }
 
       const lazyImg = new Lazyimg({
