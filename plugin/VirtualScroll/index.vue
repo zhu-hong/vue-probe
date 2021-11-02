@@ -22,11 +22,11 @@ const props = defineProps({
 const container = ref(null)
 const containSize = ref(0)
 const startIndex = ref(0)
-const endIndex = computed(() => startIndex.value + containSize.value > props.totalData.length - 1 ? props.totalData.length - 1 : startIndex.value + containSize.value)
+const endIndex = computed(() => startIndex.value + containSize.value > props.totalData.length - 1 ? props.totalData.length : startIndex.value + containSize.value)
 const renderData = computed(() => props.totalData.slice(startIndex.value, endIndex.value))
 const fillPadding = computed(() => {
   return {
-    padding: `${startIndex.value * props.itemHeight}px 0 ${(props.totalData.length - 1 - endIndex.value) * props.itemHeight}px 0`
+    padding: `${startIndex.value * props.itemHeight}px 0 ${(props.totalData.length - endIndex.value) * props.itemHeight}px 0`
   }
 })
 
