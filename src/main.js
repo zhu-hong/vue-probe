@@ -5,7 +5,7 @@ import router from './routers'
 import 'virtual:windi.css'
 import './assets/style.css'
 
-import { VueLazyload, VueVirtualScroll } from '../plugin'
+import { VueLazyload, VueVirtualScroll } from './plugins'
 import loading from './assets/loading.svg'
 import error from './assets/error.svg'
 
