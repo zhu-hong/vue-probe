@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "docs:dev": "vitepress dev docs",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "dependencies": {
+    "vitepress": "^0.20.0",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"
   },
