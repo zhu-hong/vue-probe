@@ -15,6 +15,7 @@ export default class Lazy {
       const scrollParent = getScrollParent(el)
 
       if (scrollParent && !this.isAddScrollListener) {
+        console.log(1);
         scrollParent.addEventListener('scroll', throttle(this.handleScroll.bind(this), 200), false)
         this.isAddScrollListener = true
       }

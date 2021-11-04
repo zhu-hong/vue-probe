@@ -1,14 +1,14 @@
 export function getScrollParent(el) {
-  let __parent = el.parentNode
+  if (el !== document.body) {
+    let __parent = el.parentNode
 
-  while (__parent) {
-    const styleOverflow = getComputedStyle(__parent).overflow
+    const styleOverflow = getComputedStyle(__parent).overflow || getComputedStyle(__parent).overflowY
 
     if (/(scroll)|(auto)/.test(styleOverflow)) {
       return __parent
     }
 
-    __parent = __parent.parentNode
+    getScrollParent(__parent)
   }
 }
 
