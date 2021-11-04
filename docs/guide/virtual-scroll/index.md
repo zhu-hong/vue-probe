@@ -35,10 +35,10 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 </script>
 
 <template>
-  <div class="w-100 m-auto h-screen overflow-hidden">
+  <div style="width: 400px; margin: auto; height: 100vh; overflow: hidden;">
     <virtual-scroll :totalData="totalData" :itemHeight="80">
       <template v-slot:default="item">
-        <div class="h-20 border-b border-red-500 overflow-hidden">
+        <div style="height: 80px; border-bottom: 1px solid black">
           {{ item.data.id }}
           <br />
           {{ item.data.title }}
@@ -60,11 +60,37 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
 ::: warning
 
-+ 需要一个容器将虚拟滚动组件包裹且设置一个固定高度
-+ 插槽作用域的`data`为`totalData`的子项
++ 需要一个容器将虚拟滚动组件包裹且设置一个固定高度超出部分隐藏
++ 插槽作用域的`data`为组件参数`totalData`的子项
 
 :::
 
 ### 预览
 
-> https://rc-zh.vercel.app/
+<script setup>
+import { ref } from '@vue/reactivity'
+import VirtualScroll from '../../components/VirtualScroll.vue'
+
+const totalData = ref([])
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((res) => {
+    return res.json()
+  })
+  .then((data) => {
+    totalData.value = data
+  })
+</script>
+
+
+<div style="width: 400px; margin: auto; height: 100vh; overflow: hidden;">
+  <virtual-scroll :totalData="totalData" :itemHeight="80">
+    <template v-slot:default="item">
+      <div style="height: 80px; border-bottom: 1px solid black;">
+        {{ item.data.id }}
+        <br />
+        {{ item.data.title }}
+      </div>
+    </template>
+  </virtual-scroll>
+</div>

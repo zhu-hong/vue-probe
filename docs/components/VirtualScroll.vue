@@ -1,14 +1,8 @@
-<script>
+<script setup>
 import { computed, ref } from '@vue/reactivity'
 import { nextTick } from '@vue/runtime-core'
-import { throttle } from '../../shared'
+import { throttle } from '../../src/shared'
 
-export default {
-  name: 'virtual-scroll',
-}
-</script>
-
-<script setup>
 const props = defineProps({
   totalData: {
     type: Array,
