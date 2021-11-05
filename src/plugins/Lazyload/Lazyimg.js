@@ -1,8 +1,9 @@
 import { imgLoad } from "./util"
 
 export default class Lazyimg {
-  constructor({ el, src, options, imgRender }) {
+  constructor({ el, parent, src, options, imgRender }) {
     this.el = el
+    this.parent = parent
     this.src = src
     this.options = options
     this.imgRender = imgRender
@@ -15,9 +16,11 @@ export default class Lazyimg {
   }
 
   checkIsVisible() {
-    const { top } = this.el.getBoundingClientRect()
+    const sTop = this.el.getBoundingClientRect().top
+    const boundary = this.parent.getBoundingClientRect().top + this.parent.offsetHeight
 
-    return top < window.innerHeight * (this.options.preload || 1.3)
+
+    return sTop < boundary * (this.options.preload || 1.3)
   }
 
   loadImg() {

@@ -6,7 +6,7 @@ import Lazyimg from './Lazyimg'
 export default class Lazy {
   constructor(options) {
     this.options = options
-    this.isAddScrollListener = false
+    this.scrollParentPool = []
     this.lazyImgPool = []
   }
 
@@ -14,16 +14,17 @@ export default class Lazy {
     nextTick(() => {
       const scrollParent = getScrollParent(el)
 
-      if (scrollParent && !this.isAddScrollListener) {
-        scrollParent.addEventListener('scroll', throttle(this.handleScroll.bind(this), 200), false)
-        this.isAddScrollListener = true
+      if (!this.scrollParentPool.includes(scrollParent)) {
+        this.scrollParentPool.push(scrollParent)
+        scrollParent.addEventListener('scroll', throttle(this.handleScroll.bind(this), 300), false)
       }
 
       const lazyImg = new Lazyimg({
         el,
+        parent: scrollParent,
         src: binding.value,
         options: this.options,
-        imgRender: this.imgRender.bind(this),
+        imgRender: this.imgRender,
       })
 
       this.lazyImgPool.push(lazyImg)

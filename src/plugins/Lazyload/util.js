@@ -8,8 +8,10 @@ export function getScrollParent(el) {
       return __parent
     }
 
-    getScrollParent(__parent)
+    return getScrollParent(__parent)
   }
+
+  throw new Error('img wrapper is not found')
 }
 
 export function imgLoad(src) {
