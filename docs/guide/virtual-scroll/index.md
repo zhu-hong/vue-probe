@@ -11,7 +11,6 @@ import App from './App.vue'
 
 import { VueVirtualScroll } from './plugins'
 
-
 createApp(App)
   .use(VueVirtualScroll)
   .mount('#app')
