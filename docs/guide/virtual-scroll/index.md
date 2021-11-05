@@ -20,20 +20,6 @@ createApp(App)
 ### 使用
 
 ```vue
-<script setup>
-import { ref } from '@vue/reactivity'
-
-const totalData = ref([])
-
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then((res) => {
-    return res.json()
-  })
-  .then((data) => {
-    totalData.value = data
-  })
-</script>
-
 <template>
   <div style="width: 400px; margin: auto; height: 100vh; overflow: hidden;">
     <virtual-scroll :totalData="totalData" :itemHeight="80">
@@ -47,6 +33,20 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     </virtual-scroll>
   </div>
 </template>
+
+<script setup>
+import { ref } from '@vue/reactivity'
+
+const totalData = ref([])
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((res) => {
+    return res.json()
+  })
+  .then((data) => {
+    totalData.value = data
+  })
+</script>
 ```
 
 ### 参数
@@ -83,7 +83,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 </script>
 
 
-<div style="width: 400px; margin: auto; height: 100vh; overflow: hidden;">
+<div style="width: 100%; margin: auto; height: 100vh; overflow: hidden;">
   <virtual-scroll :totalData="totalData" :itemHeight="80">
     <template v-slot:default="item">
       <div style="height: 80px; border-bottom: 1px solid black;">

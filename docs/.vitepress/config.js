@@ -1,19 +1,32 @@
 export default {
-  title: 'vue-probe',
+  title: 'VueProbe',
   lang: 'zh-CN',
-  description: '我的自定义插件/组件集合,主要用于学习(更新中...)',
+  description: '我的自定义插件/组件库，主要用于学习',
   themeConfig: {
     logo: '/logo.svg',
     sidebar: [
       {
-        text: '虚拟滚动',
-        link: '/guide/virtual-scroll/',
+        text: '介绍',
+        link: '/guide/',
+      },
+      {
+        text: '组件',
+        children: [
+          {
+            text: '虚拟滚动',
+            link: '/guide/virtual-scroll/',
+          },
+        ],
+      },
+      {
+        text: '插件',
+        children: [],
       },
     ],
     nav: [
       {
-        text: 'Github',
-        link: 'https://github.com/zhu-hong/vue-probe/',
+        text: '个人网站',
+        link: 'https://ws-zh.vercel.app/',
       },
     ],
   },
