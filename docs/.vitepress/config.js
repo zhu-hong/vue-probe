@@ -20,7 +20,12 @@ export default {
       },
       {
         text: '插件',
-        children: [],
+        children: [
+          {
+            text: '图片懒加载',
+            link: '/guide/lazyload/',
+          },
+        ],
       },
     ],
     nav: [
