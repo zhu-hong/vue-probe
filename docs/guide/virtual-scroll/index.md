@@ -2,7 +2,7 @@
 title: '虚拟滚动'
 ---
 
-### 按需加载
+### 导入
 
 ```javascript
 // mian.js
