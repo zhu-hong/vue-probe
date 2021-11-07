@@ -15,7 +15,7 @@ features:
   - title: ⚡️ 基于Vue3
     details: Composition API with script setup
   - title: 🛠️ 注重逻辑
-    details: 没有花里胡哨的CSS和第三方工具库，使用纯 JS 和 vue
+    details: 使用纯 JS 和 vue
 
 footer: MIT Licensed | Copyright © 2021-present zhu-hong
 ---

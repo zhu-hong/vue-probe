@@ -6,7 +6,7 @@ export default {
     logo: '/logo.svg',
     sidebar: [
       {
-        text: '介绍',
+        text: '快速开始',
         link: '/guide/',
       },
       {
