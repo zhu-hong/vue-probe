@@ -60,7 +60,7 @@ const handelCancel = () => {
           >
             {{ header }}
           </h1>
-          <i @click="modalShow = false" style="font-size: 1.5rem; cursor: pointer;">&times;</i>
+          <i @click="modalShow = !modalShow" style="font-size: 1.5rem; cursor: pointer;">&times;</i>
         </header>
         <article style="padding: 15px; color: black;">
           <p style="font-weight: normal; margin: 0; font-size: 1rem;">{{ content }}</p>
