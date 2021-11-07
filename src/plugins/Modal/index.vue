@@ -56,22 +56,28 @@ const handelCancel = () => {
           style="padding: 5px 15px; background-color: royalblue; display: flex; justify-content: space-between; align-items: center; color: white;"
         >
           <h1
-            style="display: block; max-width: 50%; height: 100%; text-overflow: ellipsis; overflow: hidden; white-space: normal;"
-          >{{ header }}</h1>
+            style="display: block; max-width: 50%; height: 100%; margin: 0; text-overflow: ellipsis; overflow: hidden; white-space: normal; font-weight: normal; font-size: 1rem;"
+          >
+            {{ header }}
+          </h1>
           <i @click="modalShow = false" style="font-size: 1.5rem; cursor: pointer;">&times;</i>
         </header>
         <article style="padding: 15px; color: black;">
-          <p>{{ content }} Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aliquid illo nemo tenetur enim, magni ab laboriosam a atque quidem ratione. Rem, hic! Quisquam, eum corporis autem voluptatum illum repellat.</p>
+          <p style="font-weight: normal; margin: 0; font-size: 1rem;">{{ content }}</p>
         </article>
         <div v-if="showBtns" style="display: flex; justify-content: end; margin-bottom: 10px;">
           <button
             @click="handelCancel"
-            style="min-width: 40px; margin-right: 15px; padding: 5px 15px; color: white; background-color: brown;"
-          >{{ cancelText }}</button>
+            style="min-width: 40px; margin-right: 15px; padding: 5px 15px; color: white; background-color: brown; outline: none; border: none;"
+          >
+            {{ cancelText }}
+          </button>
           <button
             @click="handelConfirm"
-            style="min-width: 40px; margin-right: 15px; padding: 5px 15px; color: white; background-color: royalblue;"
-          >{{ confirmText }}</button>
+            style="min-width: 40px; margin-right: 15px; padding: 5px 15px; color: white; background-color: royalblue; outline: none; border: none;"
+          >
+            {{ confirmText }}
+          </button>
         </div>
       </div>
     </div>
