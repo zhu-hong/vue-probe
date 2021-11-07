@@ -44,6 +44,10 @@ import imgs from './data'
 </script>
 ```
 
+### 预览
+
+> https://vue-probe.vercel.app/#/lazyload
+
 ### 配置参数
 
 | 名称    | 描述                   | 类型     | 必填 |
@@ -57,7 +61,3 @@ import imgs from './data'
 添加了`v-lazy`懒加载的图片需要有一个拥有`overflow/overflow-y: scroll/auto`的父容器
 
 :::
-
-### 预览
-
-> https://vue-probe.vercel.app/#/lazyload

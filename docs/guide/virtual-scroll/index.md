@@ -2,7 +2,7 @@
 title: '虚拟滚动'
 ---
 
-### 按需导入
+## 按需导入
 
 ```javascript
 // mian.js
@@ -16,7 +16,7 @@ createApp(App)
   .mount('#app')
 ```
 
-### 使用
+## 使用
 
 ```vue
 <template>
@@ -48,23 +48,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 </script>
 ```
 
-### 参数
-
-| 名称       | 描述                   | 类型   | 必填 |
-| ---------- | ---------------------- | ------ | ---- |
-| totalData  | 需要展示的数据         | Array  | 是   |
-| itemHeight | 放置单个数据容器的高度 | Number | 是   |
-
-### 注意
-
-::: warning
-
-+ 需要一个容器将虚拟滚动组件包裹且设置一个固定高度超出部分隐藏
-+ 插槽作用域的`data`为组件参数`totalData`的子项
-
-:::
-
-### 预览
+## 预览
 
 <script setup>
 import { ref } from '@vue/reactivity'
@@ -93,3 +77,19 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     </template>
   </virtual-scroll>
 </div>
+
+## 参数
+
+| 名称       | 描述                   | 类型   | 必填 |
+| ---------- | ---------------------- | ------ | ---- |
+| totalData  | 需要展示的数据         | Array  | 是   |
+| itemHeight | 放置单个数据容器的高度 | Number | 是   |
+
+## 注意
+
+::: warning
+
++ 需要一个容器将虚拟滚动组件包裹且设置一个固定高度超出部分隐藏
++ 插槽作用域的`data`为组件参数`totalData`的子项
+
+:::

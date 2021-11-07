@@ -2,7 +2,7 @@
 title: 模态框
 ---
 
-### 按需导入
+## 按需导入
 
 ```javascript
 // mian.js
@@ -16,14 +16,14 @@ createApp(App)
   .mount('#app')
 ```
 
-### 使用
+## 使用
 
 ```vue
 <template>
   <modal
     :show="modalShow"
-    header="??????????????????????????????????????????"
-    content="???"
+    header="???"
+    content="___________________---------------------"
     :showBtns="true"
   ></modal>
 
@@ -37,7 +37,15 @@ const modalShow = shallowRef(false)
 </script>
 ```
 
-### 参数
+## 预览
+
+<script setup>
+import ModalView from '../../components/ModalView.vue'
+</script>
+
+<ModalView/>
+
+## 参数
 
 | 名称        | 描述             | 类型    | 必填 |
 | ----------- | ---------------- | ------- | ---- |
@@ -48,17 +56,9 @@ const modalShow = shallowRef(false)
 | confirmText | 确认按钮文字     | String  | 否   |
 | cancelText  | 取消按钮文字     | String  | 否   |
 
-### 事件
+## 事件
 
 | 名称    | 描述               |
 | ------- | ------------------ |
 | confirm | 点击确认按钮的事件 |
 | cancel  | 点击取消按钮的事件 |
-
-### 预览
-
-<script setup>
-import ModalView from '../../components/ModalView.vue'
-</script>
-
-<ModalView/>
