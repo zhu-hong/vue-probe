@@ -8,6 +8,10 @@ const examples = [
     title: 'Virtual-Scroll',
     path: '/virtual-scroll',
   },
+  {
+    title: 'Modal',
+    path: '/modal',
+  },
 ]
 </script>
 

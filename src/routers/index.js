@@ -20,6 +20,13 @@ const router = createRouter({
         title: 'VirtualScroll',
       },
     },
+    {
+      path: '/modal',
+      component: () => import('../views/Modal/index.vue'),
+      meta: {
+        title: 'Modal',
+      },
+    },
   ],
   history: createWebHashHistory(),
 })
