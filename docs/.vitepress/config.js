@@ -16,6 +16,10 @@ export default {
             text: '虚拟滚动',
             link: '/guide/virtual-scroll/',
           },
+          {
+            text: '模态框',
+            link: '/guide/modal/',
+          },
         ],
       },
       {
