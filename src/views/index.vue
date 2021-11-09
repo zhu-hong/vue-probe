@@ -1,16 +1,16 @@
 <script setup>
 const examples = [
   {
-    title: 'Lazyload',
+    title: '图片懒加载',
     path: '/lazyload',
   },
   {
-    title: 'Virtual-Scroll',
+    title: '虚拟滚动',
     path: '/virtual-scroll',
   },
   {
-    title: 'Modal',
-    path: '/modal',
+    title: '一般组件',
+    path: '/ordinary',
   },
 ]
 </script>

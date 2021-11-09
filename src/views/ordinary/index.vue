@@ -1,0 +1,16 @@
+<script setup>
+import { shallowRef } from '@vue/reactivity';
+
+const modalShow = shallowRef(false)
+</script>
+
+<template>
+  <modal
+    :show="modalShow"
+    header="????????"
+    content="?????????????????????????????"
+    :showBtns="true"
+  ></modal>
+  <button @click="modalShow = !modalShow" class="mb-10">打开一个模态框</button>
+  <tree-menu></tree-menu>
+</template>

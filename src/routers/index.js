@@ -21,10 +21,10 @@ const router = createRouter({
       },
     },
     {
-      path: '/modal',
-      component: () => import('../views/Modal/index.vue'),
+      path: '/ordinary',
+      component: () => import('../views/ordinary/index.vue'),
       meta: {
-        title: 'Modal',
+        title: 'ordinary',
       },
     },
   ],
