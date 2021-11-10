@@ -13,6 +13,7 @@ export default {
 
 <style module>
 .treeMenu {
+  width: 150px;
   background-color: black;
   color: white;
 }
