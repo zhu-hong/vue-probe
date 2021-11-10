@@ -11,7 +11,7 @@ altActionLink: https://github.com/zhu-hong/vue-probe/
 
 features:
   - title: 💡 面向学习
-    details: 代码优美精简，可读性高
+    details: 代码优美友好，可读性高
   - title: ⚡️ 基于Vue3
     details: Composition API with script setup
   - title: 🛠️ 注重逻辑

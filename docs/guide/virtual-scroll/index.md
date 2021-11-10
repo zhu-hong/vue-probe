@@ -2,7 +2,7 @@
 title: '虚拟滚动'
 ---
 
-## 按需导入
+### 按需导入
 
 ```javascript
 // mian.js
@@ -16,7 +16,7 @@ createApp(App)
   .mount('#app')
 ```
 
-## 使用
+### 使用
 
 ```vue
 <template>
@@ -48,7 +48,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 </script>
 ```
 
-## 预览
+### 预览
 
 <script setup>
 import { ref } from '@vue/reactivity'
@@ -78,14 +78,14 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   </virtual-scroll>
 </div>
 
-## 参数
+### 参数
 
 | 名称       | 描述                   | 类型   | 必填 |
 | ---------- | ---------------------- | ------ | ---- |
 | totalData  | 需要展示的数据         | Array  | 是   |
 | itemHeight | 放置单个数据容器的高度 | Number | 是   |
 
-## 注意
+### 注意
 
 ::: warning
 
