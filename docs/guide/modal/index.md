@@ -16,6 +16,14 @@ createApp(App)
   .mount('#app')
 ```
 
+### 预览
+
+<script setup>
+import ModalView from '../../components/ModalView.vue'
+</script>
+
+<ModalView/>
+
 ### 使用
 
 ```vue
@@ -36,14 +44,6 @@ import { shallowRef } from '@vue/reactivity';
 const modalShow = shallowRef(false)
 </script>
 ```
-
-### 预览
-
-<script setup>
-import ModalView from '../../components/ModalView.vue'
-</script>
-
-<ModalView/>
 
 ### 参数
 

@@ -16,6 +16,36 @@ createApp(App)
   .mount('#app')
 ```
 
+### 预览
+
+<script setup>
+import { ref } from '@vue/reactivity'
+import VirtualScroll from '../../components/VirtualScroll.vue'
+
+const totalData = ref([])
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((res) => {
+    return res.json()
+  })
+  .then((data) => {
+    totalData.value = data
+  })
+</script>
+
+
+<div style="width: 100%; margin: auto; height: 100vh; overflow: hidden;">
+  <virtual-scroll :totalData="totalData" :itemHeight="80">
+    <template v-slot:default="item">
+      <div style="height: 80px; border-bottom: 1px solid black;">
+        {{ item.data.id }}
+        <br />
+        {{ item.data.title }}
+      </div>
+    </template>
+  </virtual-scroll>
+</div>
+
 ### 使用
 
 ```vue
@@ -47,36 +77,6 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   })
 </script>
 ```
-
-### 预览
-
-<script setup>
-import { ref } from '@vue/reactivity'
-import VirtualScroll from '../../components/VirtualScroll.vue'
-
-const totalData = ref([])
-
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then((res) => {
-    return res.json()
-  })
-  .then((data) => {
-    totalData.value = data
-  })
-</script>
-
-
-<div style="width: 100%; margin: auto; height: 100vh; overflow: hidden;">
-  <virtual-scroll :totalData="totalData" :itemHeight="80">
-    <template v-slot:default="item">
-      <div style="height: 80px; border-bottom: 1px solid black;">
-        {{ item.data.id }}
-        <br />
-        {{ item.data.title }}
-      </div>
-    </template>
-  </virtual-scroll>
-</div>
 
 ### 参数
 

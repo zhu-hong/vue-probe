@@ -24,6 +24,10 @@ createApp(App)
   .mount('#app')
 ```
 
+### 预览
+
+> https://vue-probe.vercel.app/#/lazyload
+
 ### 使用
 
 在需要懒加载图片上添加属性`v-lazy`即可,属性值为图片地址
@@ -43,10 +47,6 @@ createApp(App)
 import imgs from './data'
 </script>
 ```
-
-### 预览
-
-> https://vue-probe.vercel.app/#/lazyload
 
 ### 配置参数
 
