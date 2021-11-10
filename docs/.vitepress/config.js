@@ -20,6 +20,10 @@ export default {
             text: '模态框',
             link: '/guide/modal/',
           },
+          {
+            text: '无限多级菜单',
+            link: '/guide/tree-menu/',
+          },
         ],
       },
       {
