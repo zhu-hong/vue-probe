@@ -12,7 +12,7 @@ import App from './App.vue'
 import { VueTreeMenu } from './plugins'
 
 createApp(App)
-  .use(VueModal)
+  .use(VueTreeMenu)
   .mount('#app')
 ```
 
