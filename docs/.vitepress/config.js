@@ -24,6 +24,10 @@ export default {
             text: '无限多级菜单',
             link: '/guide/tree-menu/',
           },
+          {
+            text: '轮播图',
+            link: '/guide/carousel/',
+          },
         ],
       },
       {
