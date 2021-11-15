@@ -27,6 +27,13 @@ const router = createRouter({
         title: 'ordinary',
       },
     },
+    {
+      path: '/carousel',
+      component: () => import('../views/Carousel/index.vue'),
+      meta: {
+        title: '轮播图',
+      },
+    },
   ],
   history: createWebHashHistory(),
 })

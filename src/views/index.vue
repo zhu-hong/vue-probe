@@ -12,6 +12,10 @@ const examples = [
     title: '一般组件',
     path: '/ordinary',
   },
+  {
+    title: '轮播图',
+    path: '/carousel',
+  },
 ]
 </script>
 
