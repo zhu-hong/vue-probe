@@ -1,4 +1,4 @@
-export default [
+export const menus = [
   {
     id: 1,
     title: '菜单1',
@@ -90,5 +90,33 @@ export default [
         title: '菜单5-3',
       },
     ],
+  },
+]
+
+export const selectorData = [
+  {
+    id: 0,
+    value: 'js',
+    text: 'JavaScript',
+  },
+  {
+    id: 1,
+    value: 'vue',
+    text: 'Vue.js',
+  },
+  {
+    id: 2,
+    value: 'react',
+    text: 'React.js',
+  },
+  {
+    id: 3,
+    value: 'go',
+    text: 'Golang',
+  },
+  {
+    id: 4,
+    value: 'node',
+    text: 'Node.js',
   },
 ]

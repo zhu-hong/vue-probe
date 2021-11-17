@@ -3,6 +3,7 @@ import { VueVirtualScroll } from './VirtualScroll'
 import { VueModal } from './Modal'
 import { VueTreeMenu } from './TreeMenu'
 import { VueCarousel } from './Carousel'
+import { VueSelector } from './Selector'
 
 export {
   VueLazyload,
@@ -10,6 +11,7 @@ export {
   VueModal,
   VueTreeMenu,
   VueCarousel,
+  VueSelector,
 }
 
 import VirtualScroll from './VirtualScroll/index.vue'
@@ -20,6 +22,7 @@ import SubMenu from './TreeMenu/SubMenu.vue'
 import ReSubMenu from './TreeMenu/ReSubMenu.vue'
 import Carousel from './Carousel/index.vue'
 import CarouselItem from './Carousel/item.vue'
+import Selector from './Selector/index.vue'
 
 const ZLib = {
   install: (Vue) => {
@@ -31,6 +34,7 @@ const ZLib = {
     Vue.component(ReSubMenu.name, ReSubMenu)
     Vue.component(Carousel.name, Carousel)
     Vue.component(CarouselItem.name, CarouselItem)
+    Vue.component(Selector.name, Selector)
   }
 }
 

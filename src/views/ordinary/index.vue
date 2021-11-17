@@ -1,8 +1,12 @@
 <script setup>
 import { shallowRef } from '@vue/reactivity'
-import menus from './data'
+import { menus, selectorData } from './data'
 
 const modalShow = shallowRef(false)
+
+const setOption = (value) => {
+  console.log(value)
+}
 </script>
 
 <template>
@@ -19,4 +23,10 @@ const modalShow = shallowRef(false)
       <re-sub-menu :data="item" v-else></re-sub-menu>
     </template>
   </tree-menu>
+  <selector
+    style="margin-top: 20px;"
+    placeholder="请选择一个框架"
+    :options="selectorData"
+    @setOption="setOption"
+  ></selector>
 </template>
