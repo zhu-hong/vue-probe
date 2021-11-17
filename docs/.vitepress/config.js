@@ -28,6 +28,10 @@ export default {
             text: '轮播图',
             link: '/guide/carousel/',
           },
+          {
+            text: '下拉搜索框',
+            link: '/guide/selector/',
+          },
         ],
       },
       {
