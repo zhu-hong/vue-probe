@@ -1,6 +1,9 @@
 export default {
   title: 'VueProbe',
   lang: 'zh-CN',
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+  ],
   description: '我的自定义插件/组件库，主要用于学习',
   themeConfig: {
     logo: '/logo.svg',
